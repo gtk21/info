@@ -122,6 +122,23 @@ input{
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.section{
+    padding: 6.5rem 0 2rem;
+}
+
+.section_title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+.section_title::before{
+    content: attr(data-heading);
+    display: block;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--skin-color);
+}
 
 
 /*=============== SIDEBAR ===============*/
@@ -356,14 +373,216 @@ input{
 }
 
 /*===== About Section =====*/
+.about_container{
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+    align-items: center;
+}
 
+.about_img{
+    width: 520px;
+    border-radius: 1.5rem;
+    justify-content: center;
+}
+
+.about_heading{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.about_description{
+    text-align: justify;
+    padding-right: 6rem;
+    margin-bottom: var(--mb-2);
+}
+
+.about_info{
+    grid-template-columns: repeat(3,140px);
+    column-gap: .5rem;
+    margin-bottom: var(--mb-3);
+}
+
+.about_box{
+    text-align: center;
+    border-radius: .25rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--box-color);
+}
+
+.about_icon{
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    margin-bottom: var(--mb-0-75);
+}
+
+.about_title{
+    font-size: var(--small-font-size);
+}
+
+.about_subtitle{
+    font-size: var(--smaller-font-size);
+}
 
 /*===== Qualification Section =====*/
+.qualification_container {
+    grid-template-columns: repeat(2, 480px);
+    column-gap: 3rem;
+    justify-content: center;
+}
 
+.qualification_title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-2);
+}
 
+.timeline_item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: var(--mb-2-5);
+    display: flex;
+    align-items: center;
+}
+
+.timeline_item:hover {
+    background-color: var(--body-color);
+    border-radius: 5px; /* Optional for hover effect */
+}
+
+.circle_dot {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    border: 2px solid var(--skin-color);
+    border-radius: 50%;
+    background-color: var(--skin-color);
+}
+
+.timeline_item:hover .circle_dot{
+    background-color: var(--body-color);
+}
+
+.timeline_title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-25);
+}
+
+.timeline_text{
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.timeline_date{
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    font-size: var(--small-font-size);
+    color: var(--skin-color);
+}
+
+.timeline_content {
+    padding-left: 1.5rem;
+}
+
+.timeline_item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline_item::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    left: 0.48rem;
+    top: 1rem;
+    height: 100%;
+    background-color: var(--skin-color);
+}
 /*===== Skills Section =====*/
+.skills_container{
+    grid-template-columns: 360px 320px;
+    column-gap: 3rem;
+    justify-content: center;
+}
 
+.skills_header{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 
+.skills_header:not(:last-child){
+    margin-bottom: var(--mb-2-5);
+}
+
+.skills_icon,
+.skills_arrow{
+    font-size: 2rem;
+    color: var(--skin-color);
+}
+
+.skills_icon{
+    margin-right: var(--mb-0-75);
+}
+
+.skils_title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills_subtitle{
+    font-size: var(--small-font-size);
+}
+
+.skills_arrow{
+    margin-left: auto;
+}
+
+.skills_activate .skills_arrow{
+    transform: rotate(-90deg);
+    transition: .3s;
+}
+
+.skills [data-content]{
+    display: none;
+}
+
+.skills_activate[data-content]{
+    display: block;
+}
+
+.skills_list{
+    row-gap: 1.8rem;
+}
+
+.skills_titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
+}
+
+.skills_name{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills_bar,
+.skills_percentage{
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills_bar{
+    background-color: var(--box-color);
+    margin-bottom: var(--mb-2);
+}
+
+.skills_percentage{
+    display: block;
+    background-color: var(--skin-color);
+}
 /*===== Work Section =====*/
 
 
