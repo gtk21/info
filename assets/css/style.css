@@ -740,10 +740,118 @@ input{
 
 /*===== Services Section =====*/
 
+.services_container{
+    grid-template-columns: repeat(3,250px);
+    justify-content: center;
+    column-gap: 1.8rem;
+}
+
+.services_content{
+    position: relative;
+    background-color: var(--box-color);
+    padding: 6rem 0 2rem 2.5rem;
+    border-radius: .25rem;
+}
+
+.services_icon{
+    display: block;
+    font-size: 1.8rem;
+    color: var(--skin-color);
+    margin-bottom: var(--mb-1);
+}
+
+.services_button{
+    color: var(--skin-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+}
+
+.services_button-icon{
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.services_button:hover .services_button-icon{
+    transform: translateX(.25rem);
+}
+
+.services_model{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+
+
+.services_model-content{
+    width: 500px;
+    position: relative;
+    background-color: var(--box-color);
+    padding: 4.5rem 2.5rem 2.5rem;
+    border-radius: .5rem;
+}
+
+.services_model-close{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+.serivices_model-title{
+    margin-bottom: var(--mb-1);
+}
+.serivices_model-title,
+.serives_model-description{
+    text-align: center;
+}
+
+.serives_model-description{
+    font-size: var(--small-font-size);
+    padding: 0 3.5rem;
+    margin-bottom: var(--mb-2);
+}
+
+.services_model-service{
+    row-gap: var(--mb-0-75);
+}
+
+.sservices_model-service{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.services_model-icon{
+    color: var(--skin-color);
+    font-size: 1.1rem;
+}
+
+.services_model-info{
+    font-size: var(--small-font-size);
+}
 
 /* Active Modal*/
 
-
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
 /*===== Testimonial Section =====*/
 
 
