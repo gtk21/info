@@ -101,9 +101,62 @@ modalCloses.forEach((modalClose) => {
 
 
 /*=============== SWIPER TESTIMONIAL ===============*/
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 300,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2900,
+        disableOnInteraction: false, // Ensure autoplay continues even after user interaction
+    },
+    loop: true, // Enable continuous loop
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+});
+
 
 
 /*=============== INPUT ANIMATION ===============*/
+const inputs = document.querySelectorAll(".input");
+
+        function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add("focus");
+        }
+
+        function blurFunc() {
+            let parent = this.parentNode;
+            if(this.value === "") {
+                parent.classList.remove("focus");
+            }
+        }
+
+        inputs.forEach((input) => {
+            // Add focus handler
+            input.addEventListener("focus", focusFunc);
+            
+            // Add blur handler
+            input.addEventListener("blur", blurFunc);
+            
+            // Check initial state (in case form is auto-filled)
+            if (input.value !== "") {
+                input.parentNode.classList.add("focus");
+            }
+        });
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
