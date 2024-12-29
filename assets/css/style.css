@@ -1397,6 +1397,16 @@ textarea.input {
         width: 250px;
     }
 
+    .home_container {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        flex-wrap: wrap;
+    }
+
+    .home_img { 
+    margin-left: 80px; 
+}
     .nav_toggle{
         z-index: 1000;
     }
@@ -1485,6 +1495,17 @@ textarea.input {
 
     .nav_toggle{
         z-index: 1000;
+    }
+
+    .about_img{
+        width: 250px;
+    }
+
+    .home_container {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        flex-wrap: wrap;
     }
 
     .home{
