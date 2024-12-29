@@ -1205,6 +1205,12 @@ textarea.input {
 }
 
 @media screen and (max-width: 1216px) {
+    .nav_toggle{
+        z-index: 1000;
+    }
+
+    
+
     .container{
         margin-left: var(--mb-1-75);
         margin-right: var(--mb-1-75);
@@ -1311,7 +1317,6 @@ textarea.input {
 
     .about_container{
         grid-template-columns: 1fr;
-        background-color: red;
         row-gap: 2.5rem;
     }
 
@@ -1379,6 +1384,9 @@ textarea.input {
     .details_title{
         margin-bottom: var(--mb-0-75);
     }
+    .nav_toggle{
+        z-index: 1000;
+    }
 
 
 }
@@ -1389,8 +1397,8 @@ textarea.input {
         width: 250px;
     }
 
-    .about_container{
-        background-color: green; 
+    .nav_toggle{
+        z-index: 1000;
     }
 
     .qualification_container{
@@ -1474,6 +1482,11 @@ textarea.input {
         right: initial;
         left: 1.5rem;
     }
+
+    .nav_toggle{
+        z-index: 1000;
+    }
+
     .home{
         background-image: none;
         height: initial;
@@ -1558,8 +1571,8 @@ textarea.input {
         margin-right: var(--mb-1);
     }
 
-    .about_container{
-        background-color: yellow; 
+    .nav_toggle{
+        z-index: 1000;
     }
 
     .home_img{
