@@ -1311,7 +1311,6 @@ textarea.input {
 
     .about_container{
         grid-template-columns: 1fr;
-        margin-right: 50px;
         row-gap: 2.5rem;
     }
 
