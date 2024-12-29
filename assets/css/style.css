@@ -1311,6 +1311,7 @@ textarea.input {
 
     .about_container{
         grid-template-columns: 1fr;
+        background-color: red;
         row-gap: 2.5rem;
     }
 
@@ -1386,6 +1387,10 @@ textarea.input {
 @media screen and (max-width: 768px) {
     .about_img{
         width: 250px;
+    }
+
+    .about_container{
+        background-color: green; 
     }
 
     .qualification_container{
@@ -1551,6 +1556,10 @@ textarea.input {
     .container{
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
+    }
+
+    .about_container{
+        background-color: yellow; 
     }
 
     .home_img{
