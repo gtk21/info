@@ -1198,6 +1198,12 @@ textarea.input {
 /*========== BREAKPOINTS ==========*/
 /* For Large Devices */
 @media screen and (max-width: 1408px) {
+    .skills_container{
+        grid-template-columns: 360px 320px;
+        column-gap: 3rem;
+        justify-content: center;
+    }
+
     .container{
         margin-left: var(--mb-2-5);
         margin-right: 500px;
@@ -1205,6 +1211,13 @@ textarea.input {
 }
 
 @media screen and (max-width: 1216px) {
+
+    .skills_container{
+        grid-template-columns: 360px 320px;
+        column-gap: 3rem;
+        justify-content: center;
+    }
+
     .nav_toggle{
         z-index: 1000;
     }
@@ -1241,6 +1254,13 @@ textarea.input {
 }
 
 @media screen and (max-width: 1024px) {
+
+    .skills_container{
+        grid-template-columns: 360px 320px;
+        column-gap: 3rem;
+        justify-content: center;
+    }
+    
     .container{
         margin-left: var(--mb-1-5);
         margin-right: var(--mb-1-5);
@@ -1405,7 +1425,7 @@ textarea.input {
     }
 
     .home_img { 
-    margin-left: 80px; 
+    margin-left: 55px; 
 }
     .nav_toggle{
         z-index: 1000;
