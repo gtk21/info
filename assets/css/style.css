@@ -1198,6 +1198,7 @@ textarea.input {
 /*========== BREAKPOINTS ==========*/
 /* For Large Devices */
 @media screen and (max-width: 1408px) {
+    
     .skills_container{
         grid-template-columns: 360px 320px;
         column-gap: 3rem;
@@ -1211,6 +1212,8 @@ textarea.input {
 }
 
 @media screen and (max-width: 1216px) {
+
+    
 
     .skills_container{
         grid-template-columns: 360px 320px;
@@ -1254,6 +1257,9 @@ textarea.input {
 }
 
 @media screen and (max-width: 1024px) {
+
+    
+
 
     .skills_container{
         grid-template-columns: 360px 320px;
@@ -1413,6 +1419,8 @@ textarea.input {
 
 /* For Medium Devices */
 @media screen and (max-width: 768px) {
+    
+
     .about_img{
         width: 250px;
     }
@@ -1429,7 +1437,7 @@ textarea.input {
     }
 
     .home_img { 
-    margin-left: 80px; 
+    margin-left: 45px; 
 }
     .nav_toggle{
         z-index: 1000;
