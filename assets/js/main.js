@@ -213,7 +213,7 @@ document.querySelector(".contact_form").addEventListener("submit", function (e) 
     let params = {
         name: document.getElementById("un").value,
         email: document.getElementById("mail").value,
-        subject: document.getElementById("ph").value,
+        subject: document.getElementById("sub").value,
         message: document.getElementById("mes").value,
     };
 

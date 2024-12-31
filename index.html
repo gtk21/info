@@ -20,13 +20,17 @@
     <title>gtk's portfolio</title>
 
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "EQTftGUsf0VhfzOa8",
+      });
+   })();
+</script>
 
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("EQTftGUsf0VhfzOa8"); // Initialize EmailJS with your public key
-        })();
-    </script>
     
 </head>
 
@@ -1059,9 +1063,9 @@
                         <span>Email</span>
                     </div>
                     <div class="input_container">
-                        <input type="tel" class="input" id="ph">
-                        <label for="phone">Phone</label>
-                        <span>Phone</span>
+                        <input type="text" class="input" id="sub">
+                        <label for="phone">Subject</label>
+                        <span>Subject</span>
                     </div>
                     <div class="input_container textarea">
                         <textarea name="message" id="mes" class="input"></textarea>
