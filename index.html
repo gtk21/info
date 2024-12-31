@@ -18,6 +18,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>gtk's portfolio</title>
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("EQTftGUsf0VhfzOa8"); // Initialize EmailJS with your public key
+        })();
+    </script>
+    
 </head>
 
 <body>
@@ -1039,22 +1049,22 @@
             <div class="contact_container">
                 <form action="" class="contact_form">
                     <div class="input_container">
-                        <input type="text" class="input" id="username">
+                        <input type="text" class="input" id="un">
                         <label for="username">Username</label>
                         <span>Username</span>
                     </div>
                     <div class="input_container">
-                        <input type="email" class="input" id="email">
+                        <input type="email" class="input" id="mail">
                         <label for="email">Email</label>
                         <span>Email</span>
                     </div>
                     <div class="input_container">
-                        <input type="tel" class="input" id="phone">
+                        <input type="tel" class="input" id="ph">
                         <label for="phone">Phone</label>
                         <span>Phone</span>
                     </div>
                     <div class="input_container textarea">
-                        <textarea name="message" id="message" class="input"></textarea>
+                        <textarea name="message" id="mes" class="input"></textarea>
                         <label for="message">Message</label>
                         <span>Message</span>
                     </div>

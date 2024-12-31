@@ -207,58 +207,27 @@ function navHighlighter() {
     });
 }
 
+document.querySelector(".contact_form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form submission to refresh the page
 
-
-  // Initialize EmailJS with your User ID
-  (function() {
-    emailjs.init("thirukumaran.g2022ai-ds@sece.ac.in"); // Replace with your EmailJS User ID
-  })();
-
-  // Handle form submission
-  document.querySelector('.contact_form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent the default form submission
-
-    // Collect form data
-    const formData = {
-      username: document.getElementById('username').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      message: document.getElementById('message').value,
+    let params = {
+        name: document.getElementById("un").value,
+        email: document.getElementById("mail").value,
+        subject: document.getElementById("ph").value,
+        message: document.getElementById("mes").value,
     };
 
-    // Validate the form
-    if (!validateForm(formData)) return;
-
-    // Send email via EmailJS
-    emailjs.send("service_jket7je", "template_ob3ieof", formData)
-      .then(function(response) {
-        alert("Message sent successfully! Thank you for contacting me."); // Success alert
-        console.log("Success:", response);
-      }, function(error) {
-        alert("Failed to send the message. Please try again later."); // Error alert
-        console.error("Error:", error);
-      });
-  });
-
-  // Form validation function
-  function validateForm(formData) {
-    if (!formData.email.includes("@")) {
-      alert("Please enter a valid email address.");
-      return false;
-    }
-    if (formData.message.trim() === "") {
-      alert("Message cannot be empty.");
-      return false;
-    }
-    return true;
-  }
-
-
-
-
-
-
-
-
+    emailjs
+        .send("service_jket7je", "template_ob3ieof", params)
+        .then(() => {
+            alert("Email sent successfully!");
+            // Optionally, clear the form after successful submission
+            document.querySelector(".contact_form").reset();
+        })
+        .catch((error) => {
+            console.error("Error sending email:", error);
+            alert("Failed to send email. Please try again later.");
+        });
+});
 
 /*=============== SHOW SCROLL UP ===============*/
